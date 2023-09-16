@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefWidth="718.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.SceneController">
+   <children>
+      <AnchorPane layoutX="-7.0" layoutY="-7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="768.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="81.0" layoutY="149.0" prefHeight="67.0" prefWidth="582.0" text="Please enter a valid ID" textAlignment="CENTER">
+               <font>
+                  <Font name="Times New Roman" size="45.0" />
+               </font>
+            </Label>
+            <Button fx:id="swipeIn" layoutX="453.0" layoutY="275.0" mnemonicParsing="false" onAction="#swipeIn" prefHeight="37.0" prefWidth="78.0" text="Swipe-IN" />
+            <Button fx:id="swipeOut" layoutX="542.0" layoutY="275.0" mnemonicParsing="false" onAction="#swipeOut" prefHeight="37.0" prefWidth="78.0" text="Swipe-OUT" />
+            <TextField fx:id="StudentID" accessibleText="\%A1234567890" layoutX="167.0" layoutY="275.0" prefHeight="37.0" prefWidth="272.0" promptText="PSU: ID 999999999" />
+            <Button layoutX="632.0" layoutY="275.0" mnemonicParsing="false" onAction="#switchToMain" prefHeight="37.0" prefWidth="78.0" text="Go back" />
+            <Label fx:id="StudentLabel" layoutX="142.0" layoutY="357.0" prefHeight="55.0" prefWidth="500.0">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

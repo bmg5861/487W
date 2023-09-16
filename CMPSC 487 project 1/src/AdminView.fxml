@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="764.0" prefWidth="955.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.SceneController">
+   <children>
+      <AnchorPane prefHeight="578.0" prefWidth="714.0">
+         <children>
+            <SplitPane dividerPositions="0.5897166841552991" prefHeight="764.0" prefWidth="955.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="709.0" prefWidth="405.0">
+                     <children>
+                        <TableView fx:id="recordsTable" layoutX="13.0" layoutY="228.0" prefHeight="521.0" prefWidth="531.0">
+                          <columns>
+                            <TableColumn fx:id="idColumnAccess" prefWidth="108.33334350585938" text="ID" />
+                            <TableColumn fx:id="nameColumnAccess" prefWidth="98.0" text="Name" />
+                              <TableColumn fx:id="typeColumnAccess" prefWidth="93.0" text="Type" />
+                              <TableColumn fx:id="timeColumnAccess" prefWidth="150.66668701171875" text="Time" />
+                              <TableColumn fx:id="inoutColumnAccess" minWidth="7.0" prefWidth="71.0" text="In/Out" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="idRecords" layoutX="14.0" layoutY="130.0" prefHeight="25.0" prefWidth="133.0" promptText="ID or Name" />
+                        <TextField fx:id="startTime" layoutX="168.0" layoutY="130.0" prefHeight="25.0" prefWidth="336.0" promptText="Time range yyyy-mm-dd hh:mm/yyyy-mm-dd hh:mm" />
+                        <Button fx:id="resetRecords" layoutX="327.0" layoutY="56.0" mnemonicParsing="false" onAction="#resetFilter" prefHeight="47.0" prefWidth="117.0" text="Reset">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="121.0" layoutY="56.0" mnemonicParsing="false" onAction="#switchToMain" prefHeight="47.0" prefWidth="117.0" text="Go back">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <Label alignment="CENTER" layoutX="85.0" layoutY="168.0" prefHeight="34.0" prefWidth="388.0" text="Access Records">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="740.0" prefWidth="409.0">
+                     <children>
+                        <TableView fx:id="usersTable" layoutX="18.0" layoutY="226.0" prefHeight="528.0" prefWidth="356.0">
+                          <columns>
+                            <TableColumn fx:id="idColumnRecords" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="nameColumnRecords" prefWidth="103.0" text="Name" />
+                              <TableColumn fx:id="typeColumnRecords" prefWidth="87.0" text="Type" />
+                              <TableColumn fx:id="accessColumnRecords" prefWidth="90.0" text="Access" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="idUsers" layoutX="120.0" layoutY="128.0" promptText="ID: " />
+                        <Button fx:id="grantAccess" layoutX="38.0" layoutY="56.0" mnemonicParsing="false" onAction="#grantAccessBtn" prefHeight="47.0" prefWidth="133.0" text="Grant Access">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="revokeAccess" layoutX="211.0" layoutY="56.0" mnemonicParsing="false" onAction="#revokeAccessBtn" prefHeight="47.0" prefWidth="133.0" text="Revoke Acces">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="110.0" layoutY="168.0" text="User Records">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="statusLabel" layoutX="280.0" layoutY="124.0" prefHeight="25.0" prefWidth="97.0" />
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
